@@ -1,20 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Inter:wght@300;400;500&display=swap');
 
-:root{
-
-    --bg:#0d0d0d;
-    --bg2:#141414;
-
-    --gold:#c89b4a;
-    --gold-light:#e4c06d;
-
-    --text:#ececec;
-    --gray:#9b9b9b;
-
-    --line:#3a2d17;
-
-}
-
 *{
     margin:0;
     padding:0;
@@ -23,111 +8,205 @@
 
 body{
 
-    background:var(--bg);
-    color:var(--text);
+    background:#0b0b0b;
+    color:#d8d8d8;
 
     font-family:Inter,sans-serif;
 }
 
-a{
-    color:inherit;
-    text-decoration:none;
-}
-
-header{
-
-    height:70px;
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-
-    padding:0 60px;
-
-    border-bottom:1px solid var(--line);
-
-    background:#090909;
-}
-
-.logo{
-
-    color:var(--gold);
-
-    font-size:30px;
-
-    font-family:"Cormorant Garamond",serif;
-
-    letter-spacing:2px;
-}
-
-nav{
-
-    display:flex;
-    gap:45px;
-}
-
-nav a{
-
-    color:#bbb;
-
-    transition:.3s;
-}
-
-nav a:hover{
-
-    color:var(--gold);
-}
-
-.github-btn{
-
-    border:1px solid var(--gold);
-
-    color:var(--gold);
-
-    padding:12px 24px;
-
-    transition:.3s;
-}
-
-.github-btn:hover{
-
-    background:var(--gold);
-
-    color:#111;
-}
-
 .container{
 
+    max-width:1400px;
+    margin:auto;
+
     display:grid;
+    grid-template-columns:330px 1fr;
 
-    grid-template-columns:340px 1fr;
-
-    min-height:calc(100vh - 70px);
+    min-height:100vh;
 }
 
 .sidebar{
 
     padding:60px 40px;
 
-    border-right:1px solid var(--line);
+    border-right:1px solid #2b2b2b;
+
+    background:#090909;
 }
 
 .logo-box{
 
-    height:250px;
+    height:220px;
 
-    border:2px solid var(--gold);
+    border:2px solid #b88b38;
 
     display:flex;
-
+    justify-content:center;
     align-items:center;
 
-    justify-content:center;
+    font-size:42px;
+    color:#d4aa52;
 
-    font-size:55px;
+    margin-bottom:35px;
+}
+
+.sidebar h2{
+
+    font-family:"Cormorant Garamond",serif;
+    font-size:38px;
+
+    color:#d4aa52;
+
+    margin-bottom:10px;
+}
+
+.subtitle{
+
+    color:#8d8d8d;
+
+    margin-bottom:40px;
+
+    line-height:1.7;
+}
+
+.gold-btn{
+
+    width:100%;
+
+    padding:16px;
+
+    background:transparent;
+
+    color:#d4aa52;
+
+    border:1px solid #b88b38;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.gold-btn:hover{
+
+    background:#b88b38;
+
+    color:#111;
+}
+
+.downloads{
+
+    margin-top:35px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:10px;
+}
+
+.card{
+
+    height:90px;
+
+    border:1px solid #2d2d2d;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:#cfcfcf;
+
+    transition:.3s;
+}
+
+.card:hover{
+
+    border-color:#b88b38;
+
+    color:#d4aa52;
+}
+
+main{
+
+    padding:70px;
+}
+
+h1,h2{
 
     font-family:"Cormorant Garamond",serif;
 
-    color:var(--gold);
+    color:#d4aa52;
 
-    margin
+    font-weight:700;
+
+    margin-bottom:20px;
+}
+
+h1{
+
+    font-size:52px;
+}
+
+h2{
+
+    margin-top:45px;
+    font-size:34px;
+}
+
+p{
+
+    line-height:1.9;
+
+    color:#bdbdbd;
+
+    margin-bottom:25px;
+}
+
+blockquote{
+
+    border-left:3px solid #b88b38;
+
+    padding-left:20px;
+
+    color:#bfbfbf;
+
+    font-style:italic;
+
+    margin:25px 0;
+}
+
+pre{
+
+    background:#121212;
+
+    border:1px solid #262626;
+
+    border-radius:8px;
+
+    padding:20px;
+
+    overflow:auto;
+}
+
+code{
+
+    color:#d4aa52;
+}
+
+ul{
+
+    margin-left:20px;
+
+    line-height:2;
+}
+
+li::marker{
+
+    color:#d4aa52;
+}
+
+::selection{
+
+    background:#b88b38;
+    color:#000;
+}

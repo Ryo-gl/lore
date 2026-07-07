@@ -1,60 +1,133 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Inter:wght@300;400;500&display=swap');
+
+:root{
+
+    --bg:#0d0d0d;
+    --bg2:#141414;
+
+    --gold:#c89b4a;
+    --gold-light:#e4c06d;
+
+    --text:#ececec;
+    --gray:#9b9b9b;
+
+    --line:#3a2d17;
+
 }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background: #f4f4f4;
-    color: #333;
-    padding: 20px;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-header {
-    background: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    border-radius: 8px;
+body{
+
+    background:var(--bg);
+    color:var(--text);
+
+    font-family:Inter,sans-serif;
 }
 
-header h1 {
-    font-size: 2.5rem;
+a{
+    color:inherit;
+    text-decoration:none;
 }
 
-main {
-    max-width: 800px;
-    margin: 20px auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+header{
+
+    height:70px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 60px;
+
+    border-bottom:1px solid var(--line);
+
+    background:#090909;
 }
 
-section h2 {
-    margin-bottom: 10px;
-    color: #333;
+.logo{
+
+    color:var(--gold);
+
+    font-size:30px;
+
+    font-family:"Cormorant Garamond",serif;
+
+    letter-spacing:2px;
 }
 
-button {
-    background: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 10px;
+nav{
+
+    display:flex;
+    gap:45px;
 }
 
-button:hover {
-    background: #0056b3;
+nav a{
+
+    color:#bbb;
+
+    transition:.3s;
 }
 
-footer {
-    text-align: center;
-    margin-top: 20px;
-    color: #777;
+nav a:hover{
+
+    color:var(--gold);
 }
+
+.github-btn{
+
+    border:1px solid var(--gold);
+
+    color:var(--gold);
+
+    padding:12px 24px;
+
+    transition:.3s;
+}
+
+.github-btn:hover{
+
+    background:var(--gold);
+
+    color:#111;
+}
+
+.container{
+
+    display:grid;
+
+    grid-template-columns:340px 1fr;
+
+    min-height:calc(100vh - 70px);
+}
+
+.sidebar{
+
+    padding:60px 40px;
+
+    border-right:1px solid var(--line);
+}
+
+.logo-box{
+
+    height:250px;
+
+    border:2px solid var(--gold);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:55px;
+
+    font-family:"Cormorant Garamond",serif;
+
+    color:var(--gold);
+
+    margin

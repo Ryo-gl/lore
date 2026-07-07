@@ -1,0 +1,156 @@
+/* ==========================================
+   FADE IN
+========================================== */
+
+@keyframes fadeUp {
+    from {
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to {
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+section {
+    animation:fadeUp .8s ease forwards;
+}
+section:nth-child(2) {
+    animation-delay:.15s;
+}
+section:nth-child(3) {
+    animation-delay:.3s;
+}
+
+/* ==========================================
+   GOLD SHIMMER
+========================================== */
+
+@keyframes shimmer {
+    0% {
+        background-position:-300px 0;
+    }
+    100% {
+        background-position:300px 0;
+    }
+}
+
+aside h1 {
+    background:
+        linear-gradient(
+            120deg,
+            #9c6f1e 0%,
+            #d4af37 35%,
+            #fff2b2 50%,
+            #d4af37 65%,
+            #9c6f1e 100%
+        );
+    background-size:600px;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation:shimmer 7s linear infinite;
+}
+
+/* ==========================================
+   HERO GLOW
+========================================== */
+
+@keyframes heroGlow {
+    0% {
+        box-shadow: 0 0 8px rgba(212,175,55,.08);
+    }
+    50% {
+        box-shadow: 0 0 35px rgba(212,175,55,.18);
+    }
+    100% {
+        box-shadow: 0 0 8px rgba(212,175,55,.08);
+    }
+}
+
+.frame {
+    animation:heroGlow 5s ease-in-out infinite;
+}
+
+/* ==========================================
+   DIAMOND ROTATION
+========================================== */
+
+@keyframes rotateDiamond {
+    0% {
+        transform:rotate(45deg);
+    }
+    50% {
+        transform:rotate(47deg);
+    }
+    100% {
+        transform:rotate(45deg);
+    }
+}
+
+.diamond {
+    animation:rotateDiamond 6s ease-in-out infinite;
+}
+
+/* ==========================================
+   BUTTON GLOW
+========================================== */
+
+@keyframes pulse {
+    0% {
+        box-shadow:0 0 0 rgba(212,175,55,0);
+    }
+    50% {
+        box-shadow:0 0 25px rgba(212,175,55,.22);
+    }
+    100% {
+        box-shadow:0 0 0 rgba(212,175,55,0);
+    }
+}
+
+aside button:hover {
+    animation:pulse 1.2s infinite;
+}
+
+/* ==========================================
+   UNDERLINE (уже есть в layout)
+========================================== */
+
+/* ==========================================
+   PARALLAX BACKGROUND
+========================================== */
+
+.background {
+    animation:backgroundMove 20s linear infinite;
+}
+
+@keyframes backgroundMove {
+    0% {
+        transform:scale(1);
+    }
+    50% {
+        transform:scale(1.03);
+    }
+    100% {
+        transform:scale(1);
+    }
+}
+
+/* ==========================================
+   SMOKE MOVE
+========================================== */
+
+@keyframes smokeMove {
+    0% {
+        transform:translateY(0);
+        opacity:.35;
+    }
+    50% {
+        transform:translateY(-30px);
+        opacity:.5;
+    }
+    100% {
+        transform:translateY(0);
+        opacity:.35;
+    }
+}

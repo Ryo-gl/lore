@@ -402,3 +402,550 @@ aside p{
     margin-bottom:40px;
 
 }
+/* =========================================
+   SIDEBAR BUTTON
+========================================= */
+
+aside button{
+
+    width:100%;
+
+    height:70px;
+
+    margin-bottom:35px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:15px;
+
+    background:linear-gradient(180deg,#171717,#101010);
+
+    border:1px solid #40311a;
+
+    color:var(--gold);
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+aside button img{
+
+    width:22px;
+
+    filter:brightness(0) invert(78%) sepia(35%) saturate(600%) hue-rotate(3deg);
+
+}
+
+aside button::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-120%;
+
+    top:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,220,140,.18),
+        transparent
+    );
+
+    transition:.7s;
+
+}
+
+aside button:hover::before{
+
+    left:120%;
+
+}
+
+aside button:hover{
+
+    border-color:var(--gold);
+
+    box-shadow:
+
+        0 0 18px rgba(216,177,90,.18),
+
+        inset 0 0 12px rgba(216,177,90,.08);
+
+}
+
+/* =========================================
+   DOWNLOADS
+========================================= */
+
+.downloads{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:12px;
+
+}
+
+.download{
+
+    height:110px;
+
+    background:#111;
+
+    border:1px solid #282828;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    transition:.35s;
+
+    cursor:pointer;
+
+}
+
+.download img{
+
+    width:22px;
+
+    margin-bottom:14px;
+
+    opacity:.8;
+
+}
+
+.download h4{
+
+    color:#cfcfcf;
+
+    font-weight:400;
+
+}
+
+.download:hover{
+
+    border-color:var(--gold);
+
+    transform:translateY(-3px);
+
+    box-shadow:0 0 20px rgba(216,177,90,.12);
+
+}
+
+.download:hover h4{
+
+    color:var(--gold);
+
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+aside footer{
+
+    margin-top:90px;
+
+    color:#707070;
+
+    font-size:15px;
+
+    line-height:2;
+
+}
+
+aside footer span{
+
+    color:var(--gold);
+
+}
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+main{
+
+    padding:70px;
+
+}
+
+section{
+
+    margin-bottom:65px;
+
+}
+
+main h1,
+main h2{
+
+    font-family:"Cormorant Garamond",serif;
+
+    color:var(--gold);
+
+    font-weight:600;
+
+}
+
+main h1{
+
+    font-size:62px;
+
+}
+
+main h2{
+
+    font-size:42px;
+
+}
+
+.small-divider{
+
+    width:75px;
+
+    height:2px;
+
+    background:linear-gradient(
+        90deg,
+        var(--gold),
+        transparent
+    );
+
+    margin:18px 0 30px;
+
+    position:relative;
+
+}
+
+.small-divider::after{
+
+    content:"✦";
+
+    color:var(--gold);
+
+    position:absolute;
+
+    right:-12px;
+
+    top:-11px;
+
+    font-size:14px;
+
+}
+
+main p{
+
+    line-height:2;
+
+    color:#b8b8b8;
+
+    max-width:820px;
+
+}
+
+/* =========================================
+   BLOCKQUOTE
+========================================= */
+
+blockquote{
+
+    border-left:2px solid var(--gold);
+
+    padding-left:25px;
+
+    font-style:italic;
+
+    color:#bfbfbf;
+
+    line-height:2;
+
+}
+
+/* =========================================
+   CODE
+========================================= */
+
+pre{
+
+    background:#141414;
+
+    border:1px solid #292929;
+
+    border-radius:6px;
+
+    padding:28px;
+
+    overflow:auto;
+
+    transition:.3s;
+
+}
+
+pre:hover{
+
+    border-color:#4d3b1d;
+
+}
+
+code{
+
+    font-family:Consolas, monospace;
+
+    color:#d9d9d9;
+
+    font-size:15px;
+
+    line-height:1.8;
+
+}
+
+/* =========================================
+   LIST
+========================================= */
+
+ul{
+
+    margin-left:22px;
+
+    line-height:2.2;
+
+}
+
+li{
+
+    color:#c6c6c6;
+
+}
+
+li::marker{
+
+    color:var(--gold);
+
+}
+
+/* =========================================
+   BOTTOM SMOKE
+========================================= */
+
+.bottom-smoke{
+
+    position:fixed;
+
+    left:0;
+
+    bottom:0;
+
+    width:450px;
+
+    height:450px;
+
+    pointer-events:none;
+
+    opacity:.12;
+
+    background:
+
+        radial-gradient(circle,
+            rgba(216,177,90,.30),
+
+
+transparent 70%);
+
+    filter:blur(90px);
+
+}
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#090909;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#363636;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--gold2);
+
+}
+
+/* =========================================
+   SELECTION
+========================================= */
+
+::selection{
+
+    background:var(--gold);
+
+    color:#111;
+
+}
+
+/* =========================================
+   FADE ANIMATION
+========================================= */
+
+section{
+
+    animation:fade .9s ease;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+max-width:1100px{
+
+.wrapper{
+
+grid-template-columns:1fr;
+
+}
+
+aside{
+
+border-right:none;
+
+border-bottom:1px solid #222;
+
+}
+
+main{
+
+padding:40px;
+
+}
+
+header{
+
+padding:20px;
+
+flex-wrap:wrap;
+
+gap:20px;
+
+}
+
+nav{
+
+gap:20px;
+
+}
+
+.logo-frame{
+
+height:220px;
+
+}
+
+main h1{
+
+font-size:46px;
+
+}
+
+main h2{
+
+font-size:34px;
+
+}
+
+}
+
+max-width:700px{
+
+.downloads{
+
+grid-template-columns:1fr;
+
+}
+
+nav{
+
+display:none;
+
+}
+
+.logo span{
+
+font-size:26px;
+
+}
+
+.github-btn{
+
+display:none;
+
+}
+
+main{
+
+padding:30px;
+
+}
+
+aside{
+
+padding:35px;
+
+}
+
+}

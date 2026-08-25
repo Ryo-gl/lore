@@ -1,0 +1,289 @@
+/* =========================
+   ОСНОВНЫЕ НАСТРОЙКИ
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f4f2ee;
+    color: #514d48;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/* =========================
+   ШАПКА
+========================= */
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 28px 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 10;
+}
+
+.logo {
+    color: #6d665e;
+    text-decoration: none;
+
+    font-size: 25px;
+    letter-spacing: 5px;
+}
+
+.navigation {
+    display: flex;
+    gap: 35px;
+}
+
+.navigation a {
+    color: #716c66;
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    transition: opacity 0.3s ease;
+}
+
+.navigation a:hover {
+    opacity: 0.5;
+}
+
+/* =========================
+   ГЛАВНЫЙ ЭКРАН
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    padding: 100px 8%;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(247, 245, 241, 0.98) 0%,
+            rgba(247, 245, 241, 0.88) 38%,
+            rgba(247, 245, 241, 0.35) 75%,
+            rgba(247, 245, 241, 0.85) 100%
+        ),
+        url("images/world.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+/* ТУМАН */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            ellipse at 70% 50%,
+            rgba(255, 255, 255, 0.75),
+            transparent 55%
+        );
+
+    pointer-events: none;
+}
+
+/* =========================
+   ТЕКСТ HERO
+========================= */
+
+.hero-content {
+    position: relative;
+
+    max-width: 550px;
+
+    z-index: 2;
+}
+
+.hero-label {
+    margin-bottom: 25px;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+
+    color: #938b82;
+}
+
+.hero h1 {
+    margin-bottom: 30px;
+
+    font-size: clamp(55px, 7vw, 100px);
+
+    font-weight: 400;
+    line-height: 0.95;
+
+    letter-spacing: 2px;
+
+    color: #5b554f;
+}
+
+.hero-description {
+    max-width: 370px;
+
+    margin-bottom: 35px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 15px;
+    line-height: 1.8;
+
+    color: #77716b;
+}
+
+/* =========================
+   КНОПКА
+========================= */
+
+.hero-button {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 25px;
+
+    padding: 14px 22px;
+
+    border: 1px solid #c9c0b6;
+
+    color: #655e57;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    background: rgba(255, 255, 255, 0.35);
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.hero-button:hover {
+    background: rgba(255, 255, 255, 0.75);
+
+    transform: translateY(-2px);
+}
+
+.hero-button span {
+    font-size: 18px;
+}
+
+/* =========================
+   ВРЕМЕННЫЕ БЛОКИ
+========================= */
+
+.placeholder {
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-top: 1px solid #e1ddd7;
+
+    background: #f7f5f1;
+}
+
+.placeholder h2 {
+    font-size: 45px;
+    font-weight: 400;
+
+    color: #777068;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    padding: 50px 7%;
+
+    display: flex;
+    justify-content: space-between;
+
+    border-top: 1px solid #ddd8d1;
+
+    background: #eeece7;
+
+    color: #817a73;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+/* =========================
+   МОБИЛЬНАЯ ВЕРСИЯ
+========================= */
+
+max-width: 800px {
+
+    .header {
+        padding: 22px 5%;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .hero {
+        padding: 120px 8% 80px;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+    }
+
+    .hero-content {
+      max-width: 100%;
+    }
+
+    .placeholder {
+        min-height: 350px;
+    }
+
+    .placeholder h2 {
+        font-size: 35px;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 15px;
+    }
+}

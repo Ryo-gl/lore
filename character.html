@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
 
+<head>
     <meta charset="UTF-8">
 
     <meta
@@ -12,65 +12,354 @@
     <title>LORA — Персонаж</title>
 
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body class="character-page">
 
-<header class="header">
+    <!-- Верхнее меню -->
 
-    <a href="index.html" class="logo">
-        LORA
-    </a>
+    <header class="character-header">
 
-    <nav class="navigation">
-
-        <a href="index.html#characters">
-            Персонажи
-        </a>
-
-        <a href="index.html#world">
-            Мир
-        </a>
-
-        <a href="index.html#locations">
-            Места
-        </a>
-
-        <a href="index.html#history">
-            История
-        </a>
-
-        <a href="index.html#gallery">
-            Галерея
-        </a>
-
-    </nav>
-
-</header>
-
-<main id="character">
-
-    <!-- СЮДА JAVASCRIPT ЗАГРУЗИТ ПЕРСОНАЖА -->
-
-</main>
-
-<footer class="footer">
-
-    <div>
-        <div class="footer-logo">
+        <a href="index.html" class="logo">
             LORA
-        </div>
+        </a>
 
-        <p>
-            Хроники мира, которого
-            ещё нет на картах.
-        </p>
-    </div>
+        <nav>
+            <a href="index.html#characters">Персонажи</a>
+            <a href="index.html#world">Мир</a>
+            <a href="index.html#locations">Места</a>
+            <a href="index.html#history">История</a>
+            <a href="index.html#gallery">Галерея</a>
+        </nav>
 
-</footer>
+    </header>
 
-<script src="script.js"></script>
+    <!-- ОСНОВНАЯ ОБЛАСТЬ -->
+
+    <main class="character-layout">
+
+        <!-- =========================
+             ЛЕВАЯ ФИКСИРОВАННАЯ ЧАСТЬ
+        ========================== -->
+
+        <aside class="character-sidebar">
+
+            <a
+                href="index.html#characters"
+                class="back-link"
+            >
+                ← Все персонажи
+            </a>
+
+            <div class="character-profile">
+
+                <div class="character-portrait">
+
+                    <div class="portrait-placeholder">
+                        Э
+                    </div>
+
+                </div>
+
+                <div class="character-name">
+
+                    <span class="eyebrow">
+                        ПЕРСОНАЖ
+                    </span>
+
+                    <h1 id="character-name">
+                        Элиана
+                    </h1>
+
+                    <h2 id="character-title">
+                        Хранительница Света
+                    </h2>
+
+                </div>
+
+                <!-- КРАТКО О ПЕРСОНАЖЕ -->
+
+                <div class="short-description">
+
+                    <div class="small-title">
+                        КРАТКО
+                    </div>
+
+                    <p id="character-description">
+                        Элиана — хранительница древнего
+                        света, чья судьба связана
+                        с равновесием мира.
+                    </p>
+
+                </div>
+
+                <div class="profile-line"></div>
+
+                <div class="profile-quote">
+
+                    <span>“</span>
+
+                    <p id="character-quote">
+                        Свет не требует власти.
+                        Он просто показывает путь.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+        <!-- =========================
+             ПРАВАЯ ПРОКРУЧИВАЕМАЯ ЧАСТЬ
+        ========================== -->
+
+        <section class="character-scroll">
+
+            <div class="character-content">
+
+                <!-- ВВОДНЫЙ БЛОК -->
+
+                <section class="lore-block intro-block">
+
+                    <span class="section-number">
+                        01
+                    </span>
+
+                    <h2>
+                        Основная информация
+                    </h2>
+
+                    <div class="gold-line"></div>
+
+                    <div class="character-stats">
+
+                        <div>
+                            <span>Раса</span>
+                            <strong id="character-race">
+                                Эльф
+                            </strong>
+                        </div>
+
+                        <div>
+                            <span>Роль</span>
+                            <strong id="character-role">
+                                Целительница
+                            </strong>
+                        </div>
+
+                        <div>
+                            <span>Возраст</span>
+                            <strong id="character-age">
+                                248 лет
+                            </strong>
+                        </div>
+
+                        <div>
+                            <span>Родина</span>
+                            <strong id="character-homeland">
+                                Эллария
+
+
+</strong>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- ИСТОРИЯ -->
+
+                <section class="lore-block">
+
+                    <span class="section-number">
+                        02
+                    </span>
+
+                    <h2>
+                        История
+                    </h2>
+
+                    <div class="gold-line"></div>
+
+                    <div
+                        class="story-text"
+                        id="character-story"
+                    >
+
+                        <p>
+                            С детства Элиана чувствовала
+                            свет вокруг себя.
+                        </p>
+
+                        <p>
+                            Обучаясь в Храме Света,
+                            она узнала о своей миссии —
+                            защищать мир от надвигающейся
+                            тьмы.
+                        </p>
+
+                        <p>
+                            Но с каждым годом она всё
+                            больше понимает, что свет
+                            и тьма неразделимы.
+                        </p>
+
+                    </div>
+
+                </section>
+
+                <!-- СПОСОБНОСТИ -->
+
+                <section class="lore-block">
+
+                    <span class="section-number">
+                        03
+                    </span>
+
+                    <h2>
+                        Способности
+                    </h2>
+
+                    <div class="gold-line"></div>
+
+                    <div
+                        class="abilities"
+                        id="abilities"
+                    >
+
+                        <!-- JS -->
+
+                    </div>
+
+                </section>
+
+                <!-- ХАРАКТЕР -->
+
+                <section class="lore-block">
+
+                    <span class="section-number">
+                        04
+                    </span>
+
+                    <h2>
+                        Характер
+                    </h2>
+
+                    <div class="gold-line"></div>
+
+                    <div class="character-traits">
+
+                        <div class="trait">
+                            <span>01</span>
+                            <strong>Мудрость</strong>
+                            <p>
+                                Всегда стремится понять
+                                ситуацию прежде чем
+                                действовать.
+                            </p>
+                        </div>
+
+                        <div class="trait">
+                            <span>02</span>
+                            <strong>Сострадание</strong>
+                            <p>
+                                Не оставляет тех,
+                                кому нужна помощь.
+                            </p>
+                        </div>
+
+                        <div class="trait">
+                            <span>03</span>
+                            <strong>Решительность</strong>
+                            <p>
+                                Способна идти против
+                                обстоятельств ради цели.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- СВЯЗИ -->
+
+                <section class="lore-block">
+
+                    <span class="section-number">
+                        05
+                    </span>
+
+                    <h2>
+                        Связи
+                    </h2>
+
+                    <div class="gold-line"></div>
+
+                    <div
+                        class="connections"
+                        id="connections"
+                    >
+
+                        <!-- JS -->
+
+                    </div>
+
+                </section>
+
+                <!-- ГАЛЕРЕЯ -->
+
+                <section class="lore-block gallery-block">
+
+                    <span class="section-number">
+                        06
+                    </span>
+
+
+<h2>
+                        Галерея
+                    </h2>
+
+                    <div class="gold-line"></div>
+
+                    <div class="character-gallery">
+
+                        <div class="gallery-photo">
+                            01
+                        </div>
+
+                        <div class="gallery-photo">
+                            02
+                        </div>
+
+                        <div class="gallery-photo">
+                            03
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- КОНЕЦ -->
+
+                <div class="character-end">
+
+                    <span>✦</span>
+
+                    <p>
+                        Конец записи
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
